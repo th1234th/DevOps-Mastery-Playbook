@@ -13,6 +13,14 @@ The API server authenticates and authorizes requests, validates and persists API
 - [03. Health probes](03-probes-healthchecks.md)
 - [04. Autoscaling](04-autoscaling.md)
 - [05. Air-gapped deployment](05-air-gapped-deployment.md)
+- [06. CKA domain practice map](06-cka-domain-practice.md)
+- [07. Storage: PV and PVC lab](07-storage-pv-pvc-lab.md)
+- [08. Multi-node scheduling lab](08-multi-node-scheduling-lab.md)
+- [09. Helm release lifecycle lab](09-helm-release-lifecycle-lab.md)
+- [10. Cluster maintenance lab](10-cluster-maintenance-lab.md)
+- [11. Cluster troubleshooting lab](11-cluster-troubleshooting-lab.md)
+
+The [end-to-end release lab](../../03-gitops-and-strategy/end-to-end-release-lab/README.md) gives a runnable baseline across application lifecycle, Kustomize promotion, Services, selectors, troubleshooting, and recovery. The labs above add complete setup, tasks, worked answers, verification, and cleanup for storage/PVCs, multi-node scheduling, Helm, node maintenance, and troubleshooting. The kubeadm upgrade track requires disposable Ubuntu VMs; it is a version-scoped procedure and not a script to run unchanged.
 
 ## Local manifest lab
 

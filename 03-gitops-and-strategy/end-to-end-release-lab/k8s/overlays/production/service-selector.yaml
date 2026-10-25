@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: release-lab
+spec:
+  selector:
+    app.kubernetes.io/name: release-lab

@@ -1,0 +1,26 @@
+githubConfigUrl: https://github.com/REPLACE_WITH_PRIVATE_ORG/REPLACE_WITH_PRIVATE_REPOSITORY
+githubConfigSecret: arc-github-app
+controllerServiceAccount:
+  namespace: arc-systems
+  name: arc-controller-gha-rs-controller
+runnerScaleSetName: private-build
+minRunners: 0
+maxRunners: 2
+
+template:
+  spec:
+    imagePullSecrets:
+      - name: ghcr-pull
+    containers:
+      - name: runner
+        image: ghcr.io/REPLACE_WITH_LOWERCASE_OWNER/private-actions-runner:build-REPLACE_WITH_COMMIT_SHA
+        imagePullPolicy: IfNotPresent
+        command:
+          - /home/runner/run.sh
+        resources:
+          requests:
+            cpu: 500m
+            memory: 1Gi
+          limits:
+            cpu: "2"
+            memory: 4Gi

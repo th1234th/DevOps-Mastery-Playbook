@@ -1,0 +1,26 @@
+name: Private ARC runner smoke test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: private-build
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Verify custom runner tools
+        run: |
+          set -eu
+          id
+          uname -a
+          git --version
+          jq --version
+          python3 --version
+          go version
+          test -x /home/runner/run.sh

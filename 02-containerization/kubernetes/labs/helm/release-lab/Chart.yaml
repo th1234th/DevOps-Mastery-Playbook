@@ -1,0 +1,6 @@
+apiVersion: v2
+name: release-lab
+description: A small local chart for practicing Helm release lifecycle operations.
+type: application
+version: 0.1.0
+appVersion: "1.0.0"

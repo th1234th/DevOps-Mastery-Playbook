@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: checkpoint
+  namespace: storage-lab
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: storage-lab-manual
+  resources:
+    requests:
+      storage: 512Mi

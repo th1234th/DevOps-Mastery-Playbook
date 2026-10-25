@@ -8,6 +8,10 @@ There is no universal branching model. Choose trunk-based development or release
 
 See [branching strategy](git-branching-strategy.md) and [multi-cluster troubleshooting](multi-cluster-gitops-troubleshooting.md).
 
+Practice the full path in the [end-to-end release lab](end-to-end-release-lab/README.md); consult its [answer key](end-to-end-release-lab/answer.md) after attempting the tasks.
+
+For controller operations and observability, complete the [Argo CD monitoring lab](argocd-monitoring-lab/README.md). For a private custom runner image and ephemeral Kubernetes-backed GitHub Actions capacity, use the [ARC private runner lab](github-runner-lab/README.md).
+
 ## Delivery quality gates
 
 - Unit and integration tests appropriate to the changed behavior.

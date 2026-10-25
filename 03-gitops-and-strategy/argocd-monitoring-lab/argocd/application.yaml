@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: REPLACE_WITH_REPOSITORY_CLONE_URL
+    targetRevision: REPLACE_WITH_BRANCH
+    path: 03-gitops-and-strategy/argocd-monitoring-lab/demo-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

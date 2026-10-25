@@ -1,0 +1,57 @@
+name: Validate private runner image family
+
+on:
+  pull_request:
+    paths:
+      - "03-gitops-and-strategy/github-runner-lab/runner-image/**"
+      - ".github/workflows/validate-runner-images.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-smoke-test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - variant: base
+            target: base
+          - variant: node
+            target: node
+          - variant: build
+            target: build
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image variant
+        uses: docker/build-push-action@v6
+        with:
+          context: 03-gitops-and-strategy/github-runner-lab/runner-image
+          file: 03-gitops-and-strategy/github-runner-lab/runner-image/Dockerfile
+          target: ${{ matrix.target }}
+          tags: private-actions-runner:${{ matrix.variant }}
+          load: true
+          cache-from: type=gha,scope=runner-${{ matrix.variant }}
+          cache-to: type=gha,mode=max,scope=runner-${{ matrix.variant }}
+
+      - name: Verify runner user, entrypoint, and toolchain
+        env:
+          IMAGE: private-actions-runner:${{ matrix.variant }}
+          VARIANT: ${{ matrix.variant }}
+        run: |
+          docker run --rm --entrypoint /bin/sh "$IMAGE" -ec '
+            test "$(id -un)" = runner
+            test -x /home/runner/run.sh
+            case "$VARIANT" in
+              base) git --version; jq --version; python3 --version ;;
+              node) node --version; npm --version ;;
+              build) go version; python3 -m venv /tmp/runner-venv ;;
+              *) echo "unknown image variant" >&2; exit 1 ;;
+            esac
+          '

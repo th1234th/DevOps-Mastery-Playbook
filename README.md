@@ -21,10 +21,14 @@ Work through the phases in order, but treat them as a menu rather than a certifi
 
 1. Start with the [curated resources](00-learning-resources/links.md). Choose one topic at a time and write down what you can now do without a tutorial.
 2. Build foundations with [Linux and shell practice](01-linux-and-scripting/README.md) and [container labs](02-containerization/docker/README.md).
-3. Study the [Kubernetes deep dives](02-containerization/kubernetes/README.md). Apply the manifests only in a disposable, authorized cluster.
+3. Study the [Kubernetes deep dives](02-containerization/kubernetes/README.md) and use the [CKA domain practice map](02-containerization/kubernetes/06-cka-domain-practice.md) to identify practical gaps. Apply the manifests only in a disposable, authorized cluster.
 4. Design a promotion and rollback flow using [GitOps and delivery strategy](03-gitops-and-strategy/README.md).
 5. Practice cloud architecture and AI service operations with [cloud and AI labs](04-cloud-and-ai/README.md).
 6. Make the work operable with [on-call and SRE guidance](05-team-leadership/sre-on-call-handbook.md) and [review standards](05-team-leadership/code-review-standards.md).
+
+For a guided practical that connects Git, container builds, Kubernetes delivery, failure diagnosis, rollback, and incident evidence, complete the [end-to-end release lab](03-gitops-and-strategy/end-to-end-release-lab/README.md). A worked [answer key](03-gitops-and-strategy/end-to-end-release-lab/answer.md) is provided separately.
+
+Continue with the [Argo CD monitoring lab](03-gitops-and-strategy/argocd-monitoring-lab/README.md) and the [private GitHub Actions runner image lab](03-gitops-and-strategy/github-runner-lab/README.md) for GitOps observability and ephemeral self-hosted CI runners.
 
 ## Master challenges
 
@@ -33,6 +37,7 @@ Work through the phases in order, but treat them as a menu rather than a certifi
 - **Capacity:** Explain what happens when Pod demand rises beyond current node capacity, and distinguish HPA, VPA, and cluster autoscaling. See [autoscaling](02-containerization/kubernetes/04-autoscaling.md).
 - **Disconnected delivery:** Produce an inventory and verification procedure for images, charts, binaries, signatures, and dependencies before an offline deployment. See [air-gapped deployment](02-containerization/kubernetes/05-air-gapped-deployment.md).
 - **Multi-cluster GitOps:** Diagnose a staging-success/production-failure scenario without making an unreviewed production change. See [multi-cluster troubleshooting](03-gitops-and-strategy/multi-cluster-gitops-troubleshooting.md).
+- **End-to-end release:** Build one local image, promote it through staging and production, diagnose a failed readiness rollout, and recover through Git. See the [release lab](03-gitops-and-strategy/end-to-end-release-lab/README.md).
 - **Team leadership:** Define an SLO, an escalation path, and a blameless learning review for a realistic service incident.
 
 ## Quality bar
