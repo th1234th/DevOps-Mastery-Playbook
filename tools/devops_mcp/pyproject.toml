@@ -1,0 +1,17 @@
+[project]
+name = "devops-playbook-mcp"
+version = "0.1.0"
+description = "Read-only MCP companion for the DevOps Mastery Playbook"
+requires-python = ">=3.11"
+dependencies = ["mcp[cli]==2.3.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2"]
+
+[build-system]
+requires = ["setuptools>=75,<81"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

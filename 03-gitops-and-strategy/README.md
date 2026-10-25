@@ -12,6 +12,8 @@ Practice the full path in the [end-to-end release lab](end-to-end-release-lab/RE
 
 For controller operations and observability, complete the [Argo CD monitoring lab](argocd-monitoring-lab/README.md). For a private custom runner image and ephemeral Kubernetes-backed GitHub Actions capacity, use the [ARC private runner lab](github-runner-lab/README.md).
 
+The repository's optional [read-only MCP companion](../tools/devops_mcp/README.md) can search the practical catalog and provide the relevant guide as context; it does not operate clusters or alter desired state.
+
 ## Delivery quality gates
 
 - Unit and integration tests appropriate to the changed behavior.

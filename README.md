@@ -30,6 +30,8 @@ For a guided practical that connects Git, container builds, Kubernetes delivery,
 
 Continue with the [Argo CD monitoring lab](03-gitops-and-strategy/argocd-monitoring-lab/README.md) and the [private GitHub Actions runner image lab](03-gitops-and-strategy/github-runner-lab/README.md) for GitOps observability and ephemeral self-hosted CI runners.
 
+For read-only AI-assisted discovery of the playbook's practicals, see the [DevOps Playbook MCP server](tools/devops_mcp/README.md). It exposes catalog search, allowlisted guide resources, and operational prompts; it cannot run commands or change infrastructure.
+
 ## Master challenges
 
 - **Linux incident response:** Triage a service-log incident, calculate error rate and p95, detect malformed telemetry, and leave a safe evidence note. See the [host incident response lab](01-linux-and-scripting/host-incident-lab/README.md).
@@ -62,6 +64,7 @@ python3 scripts/check_local_links.py
 - [03-gitops-and-strategy](03-gitops-and-strategy/README.md)
 - [04-cloud-and-ai](04-cloud-and-ai/README.md)
 - [05-team-leadership](05-team-leadership/sre-on-call-handbook.md)
+- [Read-only DevOps Playbook MCP server](tools/devops_mcp/README.md)
 
 ## Sharing
 

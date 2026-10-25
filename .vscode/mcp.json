@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "devops-playbook": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/tools/devops_mcp/.venv/bin/python",
+      "args": ["-m", "devops_mcp.server"],
+      "cwd": "${workspaceFolder}/tools/devops_mcp"
+    }
+  }
+}
