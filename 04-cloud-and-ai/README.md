@@ -28,3 +28,5 @@ For a model-backed service, treat the model and its dependencies as production s
 ## Deliverable
 
 Create a one-page architecture decision record that includes assumptions, threat boundaries, failure modes, monitoring, cost controls, and cleanup/rollback steps.
+
+For a complete fictional scenario with SLO calculations, versioned model/prompt/retrieval releases, privacy boundaries, evaluation gates, cost controls, failure injects, and a worked response, complete the [production AI assistant capstone](production-ai-assistant-capstone.md) and review its [worked answer](production-ai-assistant-capstone-answer.md). It is a design/tabletop exercise and intentionally provisions no cloud resources or external model calls.

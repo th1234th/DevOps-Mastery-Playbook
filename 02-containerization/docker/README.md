@@ -1,8 +1,12 @@
 # Containerization with Docker
 
+Before packaging an application, practice host-level incident investigation in the [Linux host incident response lab](../../01-linux-and-scripting/host-incident-lab/README.md). It establishes log, process, filesystem, and evidence-handling basics used during container incidents too.
+
 ## Build challenge
 
 Containerize a small HTTP service. Make the image reproducible and run as a non-root user. Keep build tools out of the runtime image with a multi-stage build where it helps.
+
+For a full worked path from tests and image build through read-only/non-root runtime, health checks, failure testing, rollback notes, and cleanup, complete the [production image lab](production-image-lab/README.md).
 
 ## Review checklist
 

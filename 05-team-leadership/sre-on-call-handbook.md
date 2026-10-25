@@ -27,3 +27,5 @@ Define primary and secondary coverage, escalation paths, handoff notes, and an o
 ## Runbook minimum
 
 Each runbook states symptoms, user impact, safe diagnostics, mitigations, rollback criteria, escalation contacts, and verification of recovery. Link the runbook from the alert and keep it usable by someone outside the service's authoring team.
+
+Practice incident command, communications, recovery verification, and a blameless review in the [production incident tabletop](production-incident-tabletop.md). Its [worked response](production-incident-tabletop-answer.md) includes facilitator injects, example status updates, a timeline, and owned follow-up actions.

@@ -20,3 +20,5 @@
 ## Review prompt
 
 Ask: “What could fail after this change, how will we know, who responds, and how do we safely recover?”
+
+Apply these questions to the risky connection-pool/retry change in the [incident tabletop](production-incident-tabletop.md), then compare with the [worked review response](production-incident-tabletop-answer.md).

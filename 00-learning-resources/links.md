@@ -19,3 +19,5 @@ Use external training sites within their terms and stay inside their provided la
 2. Spend one session learning, then one session reproducing the task without the tutorial.
 3. Write a short note: what failed, how you diagnosed it, and what you would automate.
 4. Review the note with a peer or explain it aloud. Update your next goal based on what remains unclear.
+
+Use the [Practice-to-Proof lab](practice-to-proof-lab.md) to turn one external lesson into a reproducible work sample, with an [example completed record](practice-to-proof-answer.md). Do not copy third-party lesson content or answers into this repository.

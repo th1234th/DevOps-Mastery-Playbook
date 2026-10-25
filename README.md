@@ -19,8 +19,8 @@ Work through the phases in order, but treat them as a menu rather than a certifi
 
 ## Learning path
 
-1. Start with the [curated resources](00-learning-resources/links.md). Choose one topic at a time and write down what you can now do without a tutorial.
-2. Build foundations with [Linux and shell practice](01-linux-and-scripting/README.md) and [container labs](02-containerization/docker/README.md).
+1. Start with the [curated resources](00-learning-resources/links.md) and the [Practice-to-Proof lab](00-learning-resources/practice-to-proof-lab.md). Choose one topic at a time and record what you can reproduce without a tutorial.
+2. Build foundations with [Linux and shell practice](01-linux-and-scripting/README.md), including the [host incident response lab](01-linux-and-scripting/host-incident-lab/README.md), then continue to [container labs](02-containerization/docker/README.md).
 3. Study the [Kubernetes deep dives](02-containerization/kubernetes/README.md) and use the [CKA domain practice map](02-containerization/kubernetes/06-cka-domain-practice.md) to identify practical gaps. Apply the manifests only in a disposable, authorized cluster.
 4. Design a promotion and rollback flow using [GitOps and delivery strategy](03-gitops-and-strategy/README.md).
 5. Practice cloud architecture and AI service operations with [cloud and AI labs](04-cloud-and-ai/README.md).
@@ -32,6 +32,10 @@ Continue with the [Argo CD monitoring lab](03-gitops-and-strategy/argocd-monitor
 
 ## Master challenges
 
+- **Linux incident response:** Triage a service-log incident, calculate error rate and p95, detect malformed telemetry, and leave a safe evidence note. See the [host incident response lab](01-linux-and-scripting/host-incident-lab/README.md).
+- **Container release hardening:** Build and test a non-root image, run it with a read-only filesystem and restricted resources, verify health, and record rollback evidence. See the [production image lab](02-containerization/docker/production-image-lab/README.md).
+- **Cloud and AI operations:** Design a privacy-aware, human-reviewed support assistant with explicit SLOs, evaluation gates, cost controls, and degraded modes. See the [AI assistant capstone](04-cloud-and-ai/production-ai-assistant-capstone.md) and [worked answer](04-cloud-and-ai/production-ai-assistant-capstone-answer.md).
+- **Incident leadership:** Coordinate a synthetic service incident, communicate impact, review a risky change, and produce owned systemic actions. See the [incident tabletop](05-team-leadership/production-incident-tabletop.md).
 - **Kubernetes security:** Prove a read-only developer identity can inspect Pods in one namespace but cannot mutate resources or discover protected production workloads. See [RBAC and namespace isolation](02-containerization/kubernetes/02-rbac-and-namespaces.md).
 - **Workload health:** Demonstrate that an unhealthy process is restarted, while a dependency outage removes the Pod from service without causing a restart storm. See [probes](02-containerization/kubernetes/03-probes-healthchecks.md).
 - **Capacity:** Explain what happens when Pod demand rises beyond current node capacity, and distinguish HPA, VPA, and cluster autoscaling. See [autoscaling](02-containerization/kubernetes/04-autoscaling.md).

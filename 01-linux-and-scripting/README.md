@@ -24,4 +24,6 @@
 3. Create a temporary directory and ensure cleanup happens on both success and failure.
 4. Recover a mistaken commit in a throwaway Git repository using both `revert` and `reset`, then explain which is appropriate for shared history.
 
+For a complete operational scenario that combines Linux host triage, structured-log analysis, tested scripts, incident evidence, and guarded cleanup, work through the [host incident response lab](host-incident-lab/README.md) and its [answer key](host-incident-lab/answer.md). It uses only synthetic logs copied to a temporary directory and does not modify host services.
+
 For deliberate command-line puzzles, use the isolated [learning resources](../00-learning-resources/links.md).
